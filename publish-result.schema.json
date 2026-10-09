@@ -1,0 +1,21 @@
+{
+  "type": "object",
+  "properties": {
+    "platforms": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "platform": {"type": "string", "enum": ["zhihu", "csdn"]},
+          "status": {"type": "string", "enum": ["published", "pending_review", "draft_saved", "blocked", "unknown"]},
+          "url": {"type": "string"},
+          "detail": {"type": "string"}
+        },
+        "required": ["platform", "status", "url", "detail"],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": ["platforms"],
+  "additionalProperties": false
+}
